@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Translate app</title>
+  
+  <!-- HTML -->
+  
+  <!-- Custom Styles -->
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body" onpageload="showDiv()">
+    <div id="kinetic"></div>
+    
+    <main>
+  <div id="header">
+    <img id="logo" src="logo.png" alt="logo.png">
+  </div>
+  
+  <div class="translation-box">
+    
+<textarea rows="5" cols="35" placeholder="Enter sentence here..." id="input">
+  
+</textarea>
+
+<div id="text-output">
+    <p id="hide" class="hidden">Show translated sentence here...</p>
+    <p id="output"></p>
+</div>
+  
+  <button onclick="getValue()">
+      <img id="img1" src="move_to.png" alt=""> 
+      </button>
+  
+   <button class="tooltip" id="copy-text" onclick="copyText()">
+       <img src="copied.png" class="tooltip-content"/>
+       <img id="img2" src="copy.png" alt="">
+       </button>
+   
+    <div id="google_translate_element" style="background: lightcyan; padding: 10px; border-radius: 4px;"></div>  
+  
+    <!-- function which will translate the web page using google translator -->  
+    
+    <div class="header">
+        <img class="logo" src="henritek.png" alt="Logo">
+    </div>
+    
+    </main>
+  
+  <!-- Script code for google translator API -->  
+    <script type="text/javascript"   
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">  
+    </script>  
+    
+    
+  
+     <!-- Project -->
+    <script src="translate.js"></script>
+</body>
+</html>
