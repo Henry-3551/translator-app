@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+    background: blueviolet;
+    font-family: Poppins;
+    color: azure;
+    height: auto;
+    padding: 0px;
+}
+#kinetic {
+  display: none;
+  position: relative;
+  height: 80px;
+  width: 80px;
+}
+
+#kinetic::after,
+#kinetic::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom-color: #fff;
+  animation: rotateA 2s linear infinite 0.5s;
+}
+
+#kinetic::before {
+  transform: rotate(90deg);
+  animation: rotateB 2s linear infinite;
+}
+
+@keyframes rotateA {
+  0%,
+  25% {
+    transform: rotate(0deg);
+  }
+
+  50%,
+  75% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateB {
+  0%,
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50%,
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(450deg);
+  }
+}
+
+main{
+    padding: 20px;
+}
+.header{
+    margin-top: 40px;
+    background: none;
+    width: 100%;
+}
+.logo{
+    display: block;
+    margin: auto;
+    width: 30%;
+}
+div{
+  width: 100%;  
+  height: auto;
+}
+#header{
+  margin-bottom: 20px;
+}
+textarea {
+         padding: 15px;
+         height: 30vh;
+         width: 100%;
+         font-size: 0.86em;
+         line-height: 1.5rem;
+         background-color: violet;
+         color: azure;
+         border: none;
+         border-radius: 5px;
+         outline: none;
+         resize: none;
+         overflow-y: scroll;
+      }
+  textarea::placeholder{
+    color: aliceblue;
+  }
+  button{
+    width: 60px;
+    margin-bottom: 20px;
+    display: inline;
+    outline: none;
+    background: transparent;
+  }
+  .tooltip-content {
+         transition: all 0.2s;
+         visibility: hidden; /* hides the tooltip content */
+         
+         /* positions the tooltip content */
+         position: absolute;
+         z-index: 1;
+         width: 70px;
+         margin-left: -35px; /* (width / 2) x -1 */
+         left: 50%;
+         top: -110%; /* to the top */
+      }
+      .tooltip:hover > .tooltip-content {
+         visibility: visible; /* shows the tooltip content on mouse over */
+      }
+      .tooltip > .tooltip-content::after {
+         content: " ";
+         position: absolute;
+         top: 110%;
+         left: 50%;
+         margin-left: -5px;
+         transition: 0.2s;
+      }
+  img#img1,#img2{
+      width: 100%;
+  }
+  #logo{
+      width: 100%;
+  }
+  
+  #copy-text{
+    position: relative;
+    float: right;
+    top: 0px;
+    right: 0px;
+  }
+  #text-output{
+    padding: 10px;
+    font-size: 0.86em  !important;
+    line-height: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 100%;
+    height: 30vh;
+    overflow-y: scroll  !important;
+    background: violet;
+  }
+  #output{
+      display: block;
+  }
+  #hide{
+      display: block;
+      opacity: 0.7;
+  }
+  div select{
+      border-radius: 2px;
+      border: 1.2px solid violet;
+  }
